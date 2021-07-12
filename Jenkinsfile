@@ -15,8 +15,8 @@ pipeline {
                     sshTransfer(
                         sourceFiles: "**/*.php",
                         removePrefix: "",
-                        remoteDirectory: "",
-                        execCommand: "cd /home/dockeradmin/php_nginx/src"
+                        remoteDirectory: "/home/dockeradmin/php_nginx/src",
+                        execCommand: ""
                     )
                     ])
                 ])
