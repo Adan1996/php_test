@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-      stage('SSH transfer') {
+      stage('Deploy on Dev') {
         steps {
             script {
                 sshPublisher(
