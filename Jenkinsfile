@@ -13,9 +13,9 @@ pipeline {
                     verbose: true,
                     transfers: [
                     sshTransfer(
-                        sourceFiles: "**/",
+                        sourceFiles: "**/*",
                         removePrefix: "",
-                        remoteDirectory: "./php_nginx/src",
+                        remoteDirectory: "./php_nginx/src/php_nginx",
                         execCommand: ""
                     )
                     ])
