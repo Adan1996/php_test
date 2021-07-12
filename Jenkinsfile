@@ -3,7 +3,7 @@ pipeline {
 
     stages {
       stage('SSH transfer') {
-        steps{
+        steps {
             script {
                 sshPublisher(
                 continueOnError: false, failOnError: true,
@@ -13,10 +13,10 @@ pipeline {
                     verbose: true,
                     transfers: [
                     sshTransfer(
-                        sourceFiles: ".",
+                        sourceFiles: "./index.php",
                         removePrefix: "",
-                        remoteDirectory: "php_nginx/src",
-                        execCommand: ""
+                        remoteDirectory: ".",
+                        execCommand: "cd /home/dockeradmin/php_nginx/src"
                     )
                     ])
                 ])
