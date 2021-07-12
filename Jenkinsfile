@@ -13,7 +13,7 @@ pipeline {
                     verbose: true,
                     transfers: [
                     sshTransfer(
-                        sourceFiles: "**/*",
+                        sourceFiles: "./index.php",
                         removePrefix: "",
                         remoteDirectory: "./php_nginx/src/php_nginx",
                         execCommand: ""
