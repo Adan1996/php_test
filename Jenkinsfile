@@ -13,10 +13,10 @@ pipeline {
                     verbose: true,
                     transfers: [
                     sshTransfer(
-                        sourceFiles: "./index.php",
+                        sourceFiles: "**/*.php",
                         removePrefix: "",
                         remoteDirectory: ".",
-                        execCommand: "cd /home/dockeradmin/php_nginx/src"
+                        execCommand: ""
                     )
                     ])
                 ])
