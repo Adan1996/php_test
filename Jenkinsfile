@@ -13,11 +13,7 @@ pipeline {
               echo 'This is test steps'
           }
       }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> dev
       stage('Deploy on Dev') {
         when {
             expression {
