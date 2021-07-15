@@ -15,7 +15,7 @@ pipeline {
       }
 
       stage('Deploy on Dev') {
-        while {
+        when {
             expressions {
                 BRANCH_NAME == 'dev' || BRANCH_NAME 'feature-*'
             }
