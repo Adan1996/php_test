@@ -15,11 +15,6 @@ pipeline {
       }
 
       stage('Deploy on Dev') {
-        when {
-            expression {
-                BRANCH_NAME == 'dev' || BRANCH_NAME == 'feature-*'
-            }
-        }
         steps {
             script {
                 sshPublisher(
