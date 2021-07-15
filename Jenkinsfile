@@ -17,7 +17,7 @@ pipeline {
       stage('Deploy on Dev') {
         when {
             expressions {
-                BRANCH_NAME == 'dev' || BRANCH_NAME 'feature-*'
+                BRANCH_NAME == 'dev' || BRANCH_NAME == 'feature-*'
             }
         }
         steps {
