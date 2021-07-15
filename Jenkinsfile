@@ -2,7 +2,24 @@ pipeline {
     agent any
 
     stages {
+      stage('Build') {
+          steps {
+              echo 'This is build steps'
+          }
+      }
+
+      stage('Test') {
+          steps {
+              echo 'This is test steps'
+          }
+      }
+
       stage('Deploy on Dev') {
+        while {
+            expressions {
+                BRANCH_NAME == 'dev' || BRANCH_NAME 'feature-*'
+            }
+        }
         steps {
             script {
                 sshPublisher(
