@@ -2,6 +2,18 @@ pipeline {
     agent any
 
     stages {
+      stage('Build') {
+          steps {
+              echo 'This is build steps'
+          }
+      }
+
+      stage('Test') {
+          steps {
+              echo 'This is test steps'
+          }
+      }
+    
       stage('Deploy on Dev') {
         when {
             expression {
